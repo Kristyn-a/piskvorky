@@ -20,14 +20,14 @@ html {
 
 .background__heading {
   font-family: 'Lobster', cursive;
+  font-size: 2.5rem;
   display: flex;
   justify-content: center;
 }
 
 .background__info {
   display: flex;
-  flex-direction: center;
-
+  text-align: center;
 }
 
 .background__picture {
@@ -35,23 +35,21 @@ html {
   flex-wrap: wrap;
 }
 
-
 .background__buttons {
   display: flex;
   flex-direction: column;
-  gap: 1px;
 }
 
 .background__buton {
   display: flex;
-  flex-direction: row;
   align-items: stretch;
-
 }
 
 .background__button--pravidla {
   color: #ffffff;
   background-color: #1fcca4;
+  width: auto;
+  height: 50px;
 }
 
 .background__button--pravidla:hover {
@@ -61,6 +59,8 @@ html {
 .background__button--zacitHrat {
   color: #ffffff;
   background-color: #0197f6;
+  width: auto;
+  height: 50px;
 }
 
 .background__button--zacitHrat:hover {
