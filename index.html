@@ -10,33 +10,35 @@
       href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
       rel="stylesheet"
     />
-
     <title>Piskvorky</title>
   </head>
+
   <body>
     <main class="container">
       <!-- Obrázek čtyřlístků jako piškvorky -->
-      <div class="picture">
-        <img src="podklady/uvodni.jpg" alt="Picture piškvorky" />
-      </div>
-      <!-- část s textem a nadpisem -->
       <div class="background">
+        <img
+          class="background__picture"
+          src="podklady/uvodni.jpg"
+          alt="Picture piškvorky"
+        />
+        <!-- část s textem a nadpisem -->
         <h1 class="background__heading">Piškvorky</h1>
-        <p class="background_info">
+        <p class="background__info">
           Piškvorky jsou velmi oblíbená společenská hra pro dva hráče. Obvykle
           se hraje s tužkou a čtverečkovaným papírem. Nyní můžete využít naši
           skvělou aplikaci, takže už nepotřebujete ani tužku a nemusíte hledat
           čtverečkovaný papír. Přejeme vám hodně zábavy!
         </p>
-      </div>
-      <!-- Tlačítka s odkazy -->
-      <div class="background__button">
-        <button class="background__button background__button--pravidla">
-          Pravidla
-        </button>
-        <button class="background__button background__button--zacitHrat">
-          Začít hrát
-        </button>
+        <!-- Tlačítka s odkazy -->
+        <div class="background__buttons">
+          <button class="background__button background__button--pravidla">
+            Pravidla
+          </button>
+          <button class="background__button background__button--zacitHrat">
+            Začít hrát
+          </button>
+        </div>
       </div>
     </main>
   </body>

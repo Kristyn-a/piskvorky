@@ -1,21 +1,68 @@
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
-/*.background {
-  height: 100vh;
-  width: 100%;
+html {
   background: linear-gradient(#615dad 0%, #ffc8da 100%);
+  height: 100%;
+}
 
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-h1 {
+.background {
+  background-color: #283e50;
   color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 340px;
+  display: flex;
+  flex-direction: column;
+}
+
+.background__heading {
   font-family: 'Lobster', cursive;
+  display: flex;
+  justify-content: center;
 }
 
-p {
-  color: #ffffff;
+.background__info {
+  display: flex;
+  flex-direction: center;
+
 }
-}*/
+
+.background__picture {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+.background__buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.background__buton {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+
+}
+
+.background__button--pravidla {
+  color: #ffffff;
+  background-color: #1fcca4;
+}
+
+.background__button--pravidla:hover {
+  background-color: #1cbb96;
+}
+
+.background__button--zacitHrat {
+  color: #ffffff;
+  background-color: #0197f6;
+}
+
+.background__button--zacitHrat:hover {
+  background-color: #0090e9;
+}
