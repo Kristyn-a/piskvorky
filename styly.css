@@ -45,6 +45,8 @@ html {
   display: flex;
   flex-wrap: wrap;
   border-radius: 15px 15px 0 0;
+  width: 100%;
+
 }
 
 .background__buttons {
@@ -80,10 +82,4 @@ html {
 
 .background__button--zacitHrat:hover {
   background-color: #0090e9;
-}
-
-@media (min-widtd:300px) {
-  body {
-    height: 100vh;
-  }
 }
