@@ -1,21 +1,25 @@
 html {
   background: linear-gradient(#615dad 0%, #ffc8da 100%);
   height: 100%;
+
 }
+
 
 .container {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 50px;
 }
 
 .background {
   background-color: #283e50;
   color: #ffffff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  width: 340px;
   display: flex;
   flex-direction: column;
+  max-width: 340px;
+  border-radius: 15px 15px 0 0;
 }
 
 .background__heading {
@@ -23,30 +27,42 @@ html {
   font-size: 2.5rem;
   display: flex;
   justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 0;
 }
 
 .background__info {
   display: flex;
   text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 1rem 0.5rem;
+  padding: 0 0.5rem;
 }
 
 .background__picture {
   display: flex;
   flex-wrap: wrap;
+  border-radius: 15px 15px 0 0;
 }
 
 .background__buttons {
   display: flex;
   flex-direction: column;
+  font-family: Arial, Helvetica, sans-serif;
+  gap: 0.1rem;
 }
 
-.background__buton {
+.background__button {
   display: flex;
-  align-items: stretch;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: #ffffff;
 }
 
 .background__button--pravidla {
-  color: #ffffff;
   background-color: #1fcca4;
   width: auto;
   height: 50px;
@@ -57,7 +73,6 @@ html {
 }
 
 .background__button--zacitHrat {
-  color: #ffffff;
   background-color: #0197f6;
   width: auto;
   height: 50px;
@@ -65,4 +80,10 @@ html {
 
 .background__button--zacitHrat:hover {
   background-color: #0090e9;
+}
+
+@media (min-widtd:300px) {
+  body {
+    height: 100vh;
+  }
 }
