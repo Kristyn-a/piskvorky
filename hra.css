@@ -1,14 +1,13 @@
-html {
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  /* Umístění pod všemi ostatními prvky */
   background: linear-gradient(#615dad 0%, #ffc8da 100%);
-  height: 100vh;
-  background-repeat: no-repeat;
-}
-
-.body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
 }
 
 h1 {
@@ -22,8 +21,8 @@ h1 {
 }
 
 .container {
-  max-width: 80vh;
-  height: 80vh;
+  max-width: 70vh;
+  height: 65vh;
   padding: 10px 70px;
 }
 
