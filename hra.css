@@ -6,7 +6,6 @@ body::before {
   width: 100%;
   height: 100%;
   z-index: -1;
-  /* Umístění pod všemi ostatními prvky */
   background: linear-gradient(#615dad 0%, #ffc8da 100%);
 }
 
@@ -31,7 +30,6 @@ h1 {
   flex-direction: row;
   justify-content: space-between;
   margin: 15px 15px;
-
 }
 
 .infoLista__hrajePopis {
@@ -76,16 +74,23 @@ h1 {
   flex-wrap: wrap;
   width: 100%;
   height: 100%;
-
 }
 
 .buttonCube {
-  border: 2px solid #525a5f;
-  background-color: #cfa3d8;
+  border: 1px solid #525a5f;
   width: calc(100% / 10);
   height: calc(100% / 10);
+  background: linear-gradient(#e3d4ec 0%, #dca0d4 100%);
 }
 
 .buttonCube:hover {
   background-color: #cb84d9;
+}
+
+.navigacni__buttonHome:hover {
+  background-color: #1cbb96;
+}
+
+.navigacni__buttonNewGame:hover {
+  background-color: #0090e9;
 }
