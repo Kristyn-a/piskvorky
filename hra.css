@@ -1,11 +1,5 @@
-body::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
+body {
+  min-height: 100vh;
   background: linear-gradient(#615dad 0%, #ffc8da 100%);
 }
 
@@ -21,8 +15,7 @@ h1 {
 
 .container {
   max-width: 70vh;
-  height: 65vh;
-  padding: 10px 70px;
+  margin: auto;
 }
 
 .ikonyVradku {
@@ -69,17 +62,21 @@ h1 {
   border-radius: 5px 5px 5px 5px;
 }
 
+.gameArea .buttonCube {
+  box-sizing: border-box;
+  padding: 0;
+  aspect-ratio: 1/1;
+}
+
 .gameArea {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  height: 100%;
 }
 
 .buttonCube {
+  width: 10%;
   border: 1px solid #525a5f;
-  width: calc(100% / 10);
-  height: calc(100% / 10);
   background: linear-gradient(#e3d4ec 0%, #dca0d4 100%);
 }
 
@@ -89,8 +86,10 @@ h1 {
 
 .navigacni__buttonHome:hover {
   background-color: #1cbb96;
+  cursor: pointer;
 }
 
 .navigacni__buttonNewGame:hover {
   background-color: #0090e9;
+  cursor: pointer;
 }
