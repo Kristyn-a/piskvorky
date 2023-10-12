@@ -1,3 +1,5 @@
+import { findWinner } from 'https://unpkg.com/piskvorky@0.1.4';
+
 let currentPlayer = 'circle';
 
 const hrajKosticku = (udalost) => {
@@ -22,33 +24,10 @@ const hrajKosticku = (udalost) => {
   }
 };
 
-document
-  .querySelector('button:nth-child(1)')
-  .addEventListener('click', hrajKosticku);
-document
-  .querySelector('button:nth-child(2)')
-  .addEventListener('click', hrajKosticku);
-document
-  .querySelector('button:nth-child(3)')
-  .addEventListener('click', hrajKosticku);
-document
-  .querySelector('button:nth-child(4)')
-  .addEventListener('click', hrajKosticku);
-document
-  .querySelector('button:nth-child(5)')
-  .addEventListener('click', hrajKosticku);
-document
-  .querySelector('button:nth-child(6)')
-  .addEventListener('click', hrajKosticku);
-document
-  .querySelector('button:nth-child(7)')
-  .addEventListener('click', hrajKosticku);
-document
-  .querySelector('button:nth-child(8)')
-  .addEventListener('click', hrajKosticku);
-document
-  .querySelector('button:nth-child(9)')
-  .addEventListener('click', hrajKosticku);
-document
-  .querySelector('button:nth-child(10)')
-  .addEventListener('click', hrajKosticku);
+//jsou vybrané všechny tlačítka na hrací ploše
+const tlacitka = document.querySelectorAll('.gameArea buttonCube');
+
+//všechny tlačítka se projdou a na každé tlačítko se přidá addEventListener na click se stane to, že hraje hráč
+tlacitka.forEach((tlacitko) => {
+  tlacitko.addEventListener('click', hrajKosticku);
+});
