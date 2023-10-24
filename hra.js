@@ -1,6 +1,7 @@
 import { findWinner } from 'https://unpkg.com/piskvorky@0.1.4';
 
 let currentPlayer = 'circle';
+let herniPole = [];
 
 //jsou vybrané všechny tlačítka na hrací ploše
 const tlacitka = document.querySelectorAll('.buttonCube');
@@ -46,12 +47,11 @@ const hrajKosticku = (udalost) => {
     };
     setTimeout(zpozdiAlert, 100);
   }
-};
 
-//všechny tlačítka se projdou a na každé tlačítko se přidá addEventListener na click se stane to, že hraje hráč
-// tlacitka.forEach((tlacitko) => {
-//   tlacitko.addEventListener('click', hrajKosticku);
-// });
+  if (currentPlayer === 'cross') {
+    inteligence();
+  }
+};
 
 const inteligence = async () => {
   if (currentPlayer === 'cross') {
@@ -74,16 +74,12 @@ const inteligence = async () => {
       const x = data.position.x;
       const y = data.position.y;
       const index = x + y * 10;
-      const field = hrajKosticku[index];
+      const field = tlacitka[index];
       field.click();
     }
   }
-
-  // const field = tlacitkaZnovu[index];
-  // field.click();
-
-  tlacitka.forEach((tlacitko) => {
-    tlacitko.addEventListener('click', field);
-  });
 };
-inteligence();
+//všechny tlačítka se projdou a na každé tlačítko se přidá addEventListener na click se stane to, že hraje hráč
+tlacitka.forEach((tlacitko) => {
+  tlacitko.addEventListener('click', hrajKosticku);
+});
