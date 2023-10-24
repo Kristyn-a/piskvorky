@@ -49,6 +49,41 @@ const hrajKosticku = (udalost) => {
 };
 
 //všechny tlačítka se projdou a na každé tlačítko se přidá addEventListener na click se stane to, že hraje hráč
-tlacitka.forEach((tlacitko) => {
-  tlacitko.addEventListener('click', hrajKosticku);
-});
+// tlacitka.forEach((tlacitko) => {
+//   tlacitko.addEventListener('click', hrajKosticku);
+// });
+
+const inteligence = async () => {
+  if (currentPlayer === 'cross') {
+    const response = await fetch(
+      'https://piskvorky.czechitas-podklady.cz/api/suggest-next-move',
+      {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          board: herniPole,
+          player: 'x',
+        }),
+      },
+    );
+
+    if (response.ok) {
+      const data = await response.json();
+      const x = data.position.x;
+      const y = data.position.y;
+      const index = x + y * 10;
+      const field = hrajKosticku[index];
+      field.click();
+    }
+  }
+
+  // const field = tlacitkaZnovu[index];
+  // field.click();
+
+  tlacitka.forEach((tlacitko) => {
+    tlacitko.addEventListener('click', field);
+  });
+};
+inteligence();
