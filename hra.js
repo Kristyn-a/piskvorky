@@ -1,12 +1,13 @@
 import { findWinner } from 'https://unpkg.com/piskvorky@0.1.4';
 
 let currentPlayer = 'circle';
-let herniPole = [];
+let herniPole = Array(100).fill('_');
+const hraSkoncila = false;
 
 //jsou vybrané všechny tlačítka na hrací ploše
 const tlacitka = document.querySelectorAll('.buttonCube');
 
-const hrajKosticku = (udalost) => {
+const hrajKosticku = async (udalost) => {
   const button = udalost.target;
 
   // Přepínání mezi 'circle' a 'cross'
@@ -48,8 +49,8 @@ const hrajKosticku = (udalost) => {
     setTimeout(zpozdiAlert, 100);
   }
 
-  if (currentPlayer === 'cross') {
-    inteligence();
+  if (currentPlayer === 'cross' && !hraSkoncila) {
+    await inteligence();
   }
 };
 
